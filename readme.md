@@ -82,3 +82,59 @@ L'une de ces propriétés est l'identifiant. L'indetifiant est une propriété q
 Les relations permetten de relier les entités entres elle. Par exemple : 
 - un client peut passer une ou plusieur commandes: 
 ![alt text](image-2.png)
+
+# Les cardinalités 
+Une cardinalité exprime le nombre de fois ou l'occurence d'une entite participe aux occurences de la relation
+ - Combien de fois au minimum un client peut-il commander un article ? 
+ - Combien de fois au maximum un client peut-il commander un article ? 
+ ![alt text](image4.png)
+
+ Pour obtenir la cardinalité suivante on se pose les memes questions, mais cette fois-ci pour l'entitié Article.
+ - Combien de fois au minimum un Article peut etre commander ?
+ - Combien de fois au maximum un Article peut etre commander ?
+![alt text](image4.png)
+
+Les cardinalités : 
+
+- Une mere peut elever un ou plusieurs enfants
+- Un enfant peut etre eleve par une et une seule mere 
+![alt text](image6.png)
+
+# Relation Porteuse (Propriété) : 
+Une relation porteuse est dite si elle possede des propiretes.
+
+
+Relation qui fait intervenir deux entites : c'est une relation binaire
+Relation qui fait intervenir trois entites : c'est une relation ternaire.
+
+# Les relations Reflexives :
+Une relation est dite reflexive si elle relie une entite a elle meme.
+
+### Regle de conception
+ # Les relations reflexives :
+ 
+Une relation est dite reflexive si elle relie une entite a elle meme
+(photo reflexive)
+ 
+ 
+# Règles d'usage :
+ 
+Toute entité doit forcément avoir un identifiant
+Toutes les propriétés de l'entité dépendent fonctionnelement de l'idenfifiant
+Le nom d'une propiété doit apparaitre une seule fois dans un modèle de propriété (tout le MCD)
+On peut utiliser un préfixe ou suffixe
+ 
+ 
+# Notion d'entite forte et d'entite faible
+ 
+Forte : peut exister seule (pas besoin d'autres entités)
+Faible : a besoin d'une autre entite pour exister
+ 
+ 
+# Contraintes d'integrite fonctionnelle (CIF)
+ 
+Une CIF est definie par le fait qu'une des entites de l'assocation est completement determinee par la connaissance d'une ou plusieuurs entites participant à l'association
+(photo contrainte integrite)
+
+Voici je qu'on a fait ce jour : 
+![alt text](image-4.png)
