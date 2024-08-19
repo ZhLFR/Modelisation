@@ -61,4 +61,24 @@ Le role d'une dep fonctionnelles est de faire la relations entre deux attributs 
  - NumCommande RefProduit -> QuantiteCommandee
  - ~~NumCommande RefProduit -> DesignationProduit~~ 
 
+# Partie conceputelle MCD :
  
+MCD est un schéma conceptuel qui permet de représenter les donées d'une entreprise
+Propriétés
+Entités
+Relations
+ 
+Les propriétés sont les informations de base d'un système d'information. Elles disposent d'un type et d'une longueur. Nous n'allons pas décrire en détail les propriétés. Nous allons simplement les nommer.
+ 
+Les entittés ou objets :
+Les entittés sont un ensemble de propriétés qui décrivent un objet du système d'information. Elles sont représentées par un rectangle.
+ 
+L'identifiant :
+L'une de ces propriétés est l'identifiant. L'indetifiant est une propriété qui permet d'identifier de manière unique une entité. Il est représenté par un souligné.
+![alt text](image-3.png)
+
+# Les relations ou Associations
+
+Les relations permetten de relier les entités entres elle. Par exemple : 
+- un client peut passer une ou plusieur commandes: 
+![alt text](image-2.png)
