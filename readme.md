@@ -141,3 +141,41 @@ Voici je qu'on a fait ce jour :
 
 Voici le MCD effectuer sans les cardinalités
 ![alt text](image-5.png)    
+
+# Mardi : 
+
+### Le MLD : 
+
+Pour representer une relation, on va remplacer la relation par une clé etrangère.
+
+
+Dans le cas ou la "cardinalité max" est n des deux cotés, on cree une entité intermediaire qui va contenir les deux clés etrangeres des deux entites.
+
+Lorsque l'on passe du MCD au MLD c'est la cardinalité qui a maximale = 1 recevra l'identifiant ou les identifiants ayant les cardinalités maximales les plus fortes
+
+Les relations ayant toutes leurs entités reliés avec des caridnalites maximales superieures a 1 se transfomreront en entite en absorbant les identifiants des entités jointes.
+
+
+# MPD : 
+
+Le MPD permet de passer du modele logique au modele physique des donnees.
+
+1er etape : créer un shéma relationnel (ecrire ce que l'on voit)
+2e etape : verifier que tout est bon 
+
+Convention de nommage de SGBD
+
+
+Exo 1 : 
+![alt text](image-6.png)
+
+Voici le mld de l'exercice : 
+
+Ventes (  #Num ventes,   Quantité,   Date de vente,   Num Produit,   Num Produits_Produits  )
+
+Prix de vente (  #Nom de produits,   Num ventes_Ventes  )
+
+Produits (  #Num Produits,   Type Produit,   Poids Produit  )
+
+Exo 2 : 
+![alt text](image-7.png)
