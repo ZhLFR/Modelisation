@@ -138,3 +138,6 @@ Une CIF est definie par le fait qu'une des entites de l'assocation est completem
 
 Voici je qu'on a fait ce jour : 
 ![alt text](image-4.png)
+
+Voici le MCD effectuer sans les cardinalités
+![alt text](image-5.png)    
