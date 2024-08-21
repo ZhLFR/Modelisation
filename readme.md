@@ -178,4 +178,88 @@ Prix de vente (  #Nom de produits,   Num ventes_Ventes  )
 Produits (  #Num Produits,   Type Produit,   Poids Produit  )
 
 Exo 2 : 
+
+Voici le MLD et MCD de l'enoncé 
+
+![alt text](image-9.png)
 ![alt text](image-7.png)
+![alt text](image-8.png)
+
+Cette exercice est different des autres car on part directement du modele relationnel
+
+
+Exo 3 :
+
+![alt text](image-11.png)
+![alt text](image-10.png)
+![alt text](image-12.png)
+
+```sql
+CREATE TABLE Clients (
+    Num_Client NUMERIC(2),
+    Nom TEXT(25),
+    Prenom TEXT(25),
+    Ville TEXT(25),
+    Adresse TEXT(25),
+    CP NUMERIC(5),
+    Tel NUMERIC(10),
+    Num_Mat_Materiel NUMERIC(2),
+    PRIMARY KEY (Num_Client)
+) ENGINE=InnoDB;
+
+CREATE TABLE Materiel (
+    Num_Mat NUMERIC(2),
+    Type_Mat TEXT(20),
+    Num_Serie TEXT(25),
+    Num_Intervention_Intervention NUMERIC(2),
+    PRIMARY KEY (Num_Mat)
+) ENGINE=InnoDB;
+
+CREATE TABLE Intervention (
+    Num_Intervention NUMERIC(2),
+    Date_Intervention DATE,
+    Num_Client_Clients NUMERIC(2),
+    Type_D_intervention TEXT(20),
+    PRIMARY KEY (Num_Intervention)
+) ENGINE=InnoDB;
+
+CREATE TABLE New_Composant (
+    Num_Composant NUMERIC(2),
+    Prix_Vente_Compo FLOAT(5,2), 
+    Qte_Reparation NUMERIC(10),
+    PRIMARY KEY (Num_Composant)
+) ENGINE=InnoDB;
+
+CREATE TABLE Prix_Intervention (
+    Type_D_intervention TEXT(20),
+    Heure_Debut_Intervention TIME,
+    Heure_Fin_Intervention TIME,
+    Num_Mat_Materiel NUMERIC(2),
+    Num_Composant_New_Composant NUMERIC(2),
+    PRIMARY KEY (Type_D_intervention)
+) ENGINE=InnoDB;
+
+ALTER TABLE Clients 
+    ADD CONSTRAINT FK_Clients_Num_Mat_Materiel 
+    FOREIGN KEY (Num_Mat_Materiel) REFERENCES Materiel(Num_Mat);
+
+ALTER TABLE Materiel 
+    ADD CONSTRAINT FK_Materiel_Num_Intervention_Intervention 
+    FOREIGN KEY (Num_Intervention_Intervention) REFERENCES Intervention(Num_Intervention);
+
+ALTER TABLE Intervention 
+    ADD CONSTRAINT FK_Intervention_Num_Client_Clients 
+    FOREIGN KEY (Num_Client_Clients) REFERENCES Clients(Num_Client);
+
+ALTER TABLE Intervention 
+    ADD CONSTRAINT FK_Intervention_Type_D_intervention 
+    FOREIGN KEY (Type_D_intervention) REFERENCES Prix_Intervention(Type_D_intervention);
+
+ALTER TABLE Prix_Intervention 
+    ADD CONSTRAINT FK_Prix_Intervention_Num_Mat_Materiel 
+    FOREIGN KEY (Num_Mat_Materiel) REFERENCES Materiel(Num_Mat);
+
+ALTER TABLE Prix_Intervention 
+    ADD CONSTRAINT FK_Prix_Intervention_Num_Composant_New_Composant 
+    FOREIGN KEY (Num_Composant_New_Composant) REFERENCES New_Composant(Num_Composant);
+```

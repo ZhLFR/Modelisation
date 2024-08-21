@@ -8,9 +8,9 @@ CREATE TABLE Ventes(
 ) ENGINE=InnoDB;
 
 CREATE TABLE Prix_de_vente(
-    Nom_de_produits VARCHAR(255),  -- Utilisation de VARCHAR avec une longueur de 255 caractères
+    Nom_de_produits VARCHAR(255),
     Num_ventes_Ventes INT,
-    PRIMARY KEY (Nom_de_produits(100))  -- Indexation des 100 premiers caractères de Nom_de_produits
+    PRIMARY KEY (Nom_de_produits(100))  
 ) ENGINE=InnoDB;
 
 CREATE TABLE Produits(
